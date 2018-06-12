@@ -10,6 +10,7 @@ public class BlockChainTest {
 		bc.addTransaction(new Transaction("B", "A", 50));
 		bc.addTransaction(new Transaction("A", "C", 10));
 		
+		System.out.println("Start mining pending transactions...");
 		while(bc.isTransactionPendingToMine()){
 			bc.minePendingTransaction();
 		}
